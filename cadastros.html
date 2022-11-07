@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sessão</title>
+    <script src="codigo.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulario para cadastrar o Politico</h1>
+        <div>
+            <label>Usuario</label>
+            <input type="text" name="usuario" id="usuario" /><br><br>
+            <label>Login</label>
+            <input type="text" name="name" id="login" /><br><br>
+            <label>Senha</label>
+            <input type="password" name="senha" id="senha" /><br><br>
+            <button type="button" onclick="cadastrarPolitico()">Enviar</button>
+        </div>
+
+        <h1>Formulario para cadastrar a Sessão</h1>
+        <div>
+            <label>Nome da Sessão</label>
+            <input type="text" name="nome" id="nomeSessao" />
+            <label>Descrição</label>
+            <input type="text" name="descricao" id="descricao" /><br>
+            <label>Data inicial Sessão</label>
+            <input type="date" name="data" id="dataInicio" />
+            <label>Data final Sessão</label>
+            <input type="date" name="data" id="dataFim" /><br><br>
+            <button type="button" onclick="cadastrarSessao()">Enviar</button>
+        </div>
+
+</body>
+
+</html>

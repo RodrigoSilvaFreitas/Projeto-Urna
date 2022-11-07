@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Apuração Urna</title>
+  <meta charset="UTF-8">
+  <script src="codigo.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <button class="verde" onclick="resultado()">Resultado</button>
+  <p id="resultado"></p>
+  <a href="index.html">Voltar</a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script>
+    const politicoSessao = JSON.parse(window.localStorage.getItem("politicoSessao"));
+    axios.get(`http://localhost:5000/sessao/${politicoSessao.sessao.id}/qtd_votos`)
+      .then(response => resultado(response.data))
+      .catch(error => console.log(error))
+    const resultado = (votos) => {
+      const resultado = document.getElementById('votos')
+      const resultadoPos = document.createElement('li')
+      resultadoPos.innerHTML = `Votos positivos ${votos.qtd_pos}`
+      const resultadoNeg = document.createElement('li')
+      resultadoNeg.innerHTML = `Votos negativos ${votos.qtd_neg}`
+    }
+  </script>
+</body>
+
+</html>

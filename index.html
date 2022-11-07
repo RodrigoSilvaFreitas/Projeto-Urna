@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Urna</title>
+    <meta charset="UTF-8">
+    <script src="codigo.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="branco">
+            <div class="tela">
+                <p>Voto:</p>
+                <form action="">
+                    <input size="5" id="campo5" value="" maxlength="5" type="text" readonly="readonly" />
+                </form>
+            </div>
+            <div class="tarjacclaro">
+                <b>JUSTIÇA<br>ELEITORAL</b>
+            </div>
+            <div class="fdoteclado">
+                <button class="botao click" onclick="inserir('sim')">Sim</button>
+                <button class="botao click" onclick="inserir('nao')">Não</button>
+
+                <div class="teclado2">
+                    <button class="laranja" onclick="corrige()">CORRIGE</button>
+                    <button class="verde" onclick="votar()">CONFIRMA</button>
+                </div>
+            </div>
+        </div>
+        <a href="resultado.html">Resultado</a>
+    </div>
+
+</body>
+
+</html>
